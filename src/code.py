@@ -5,6 +5,7 @@ import web #import the package for web
 
 urls =  ("/", "index", "/test*", "test")
 def readhtml(htmlfile):
+    # read html file to string
     return open(htmlfile, 'rb').read()
 
 class index:
@@ -13,6 +14,7 @@ class index:
         
 class test():
     def GET(self):
+        # get the input of user in html
         user_data = web.input()
         fisrt_name = user_data.FirstName
         last_name = user_data.LastName
