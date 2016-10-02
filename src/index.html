@@ -2,14 +2,22 @@
 <html>
 <head>
 	<title>Hello  World</title>
+    <meta charset="UTF-8">
 </head>
 <body>
 <h4> This is hello world test</h4>
 <h1> <font color="red"> Hello World!</font> </h1>
 <form action="test" method="GET">
-    First name: <input type="text" name="FirstName" value="Mickey"><br>
-    Last name: <input type="text" name="LastName" value="Mouse"><br>
-    <input type="submit" value="Submit">
+    First name: <input id="input1" type="text" name="FirstName" value=""><br>
+    Last name: <input id="input2" type="text" name="LastName" value=""><br>
+    <input type="button" value="自动填充" onclick="fill()">
+    <input type="submit" value="提交">
 </form>
+<script >
+    function fill(){
+        document.getElementById("input1").value = "Mickey"; 
+        document.getElementById("input2").value = "Mouse";
+    }
+</script>
 </body>
 </html>
